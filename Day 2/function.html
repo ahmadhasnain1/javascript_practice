@@ -1,17 +1,67 @@
 <!DOCTYPE html>
 <html>
-<head>
-<script>
-function myFunction() {
-  document.getElementById("demo").innerHTML = "Paragraph changed.";
-}
-</script>
-</head>
-<body>
-<h2>Demo JavaScript in Head</h2>
+  <head>
+    <script>
+      function myFunction() {
+        document.getElementById("demo").innerHTML = "Paragraph changed.";
+      }
+      function addition() {
+        num1 = Math.floor(Math.random() * 100) + 1;
+        num2 = Math.floor(Math.random() * 100) + 1;
+        let result = num1+num2;
+        document.getElementById("demo").innerHTML = "Addition of "+num1+" and "+num2+" is "+result;
+      }
+      function subtraction() {
+        num1 = Math.floor(Math.random() * 100) + 1;
+        num2 = Math.floor(Math.random() * 100) + 1;
+        let result = num2-num1;
+        document.getElementById("demo").innerHTML = "Subtraction of "+num2+" and "+num1+" is "+result;
+      }
+      function multiplication() {
+        num1 = Math.floor(Math.random() * 100) + 1;
+        num2 = Math.floor(Math.random() * 100) + 1;
+        let result = num1*num2;
+        document.getElementById("demo").innerHTML = "Multiplication of "+num1+" and "+num2+" is "+result;
+      }
+      function division() {
+        num1 = Math.floor(Math.random() * 100) + 1;
+        num2 = Math.floor(Math.random() * 100) + 1;
+        let result = num2/num1;
+        document.getElementById("demo").innerHTML = "Division of "+num2+" and "+num1+" is "+result;
+      }
+      function checkEquality() {
+        num1 = Math.floor(Math.random() * 100) + 1;
+        num2 = Math.floor(Math.random() * 100) + 1;
+        let result = num1==num2 ? "equal" : "not equal";
+        document.getElementById("demo").innerHTML = num1+" and "+num2+" are "+result;
+      }
+      function checkGreator() {
+        num1 = Math.floor(Math.random() * 100) + 1;
+        num2 = Math.floor(Math.random() * 100) + 1;
+        let result = num1>num2 ? "is greater" : "is not greater";
+        document.getElementById("demo").innerHTML = num1 + result + " than " + num2;
+      }
+      function checkSmaller() {
+        num1 = Math.floor(Math.random() * 100) + 1;
+        num2 = Math.floor(Math.random() * 100) + 1;
+        let result = num1<num2 ? "is smaller" : "is not smaller";
+        document.getElementById("demo").innerHTML = num1 + result + " than " + num2;
+      }
 
-<p id="demo">A Paragraph</p>
-<button type="button" onclick="myFunction()">Try it</button>
+    </script>
+  </head>
+  <body>
+  <h2>Demo JavaScript Functions and Some operations on two random numbers</h2>
 
-</body>
+  <p id="demo">A Paragraph</p>
+  <button type="button" onclick="myFunction()">Try it</button>
+  <button type="button" onclick="addition(1,2)">Add Two Numbers</button>
+  <button type="button" onclick="subtraction(1,2)">Subtract Two Numbers</button>
+  <button type="button" onclick="multiplication(2,2)">Multiply Two Numbers</button>
+  <button type="button" onclick="division(2,4)">Divide Two Numbers</button>
+  <button type="button" onclick="checkEquality(1,2)">Check Equality</button>
+  <button type="button" onclick="checkGreator(4,3)">Check Greator</button>
+  <button type="button" onclick="checkSmaller(4,3)">Check Smaller</button>
+
+  </body>
 </html>
