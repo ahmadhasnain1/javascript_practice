@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router()
-var middleware = require('./middlewares/using_router');
+var middleware = require('./middlewares/test');
 
 
 // define the about route
