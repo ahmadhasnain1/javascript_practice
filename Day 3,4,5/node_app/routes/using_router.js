@@ -4,8 +4,8 @@ var middleware = require('./middlewares/test');
 
 
 // define the about route
-router.get('/about', middleware, function (req, res) {
-  res.send('About birds')
+router.get('/', middleware, function (req, res) {
+  res.send('\n hello world')
 })
 
 module.exports = router
