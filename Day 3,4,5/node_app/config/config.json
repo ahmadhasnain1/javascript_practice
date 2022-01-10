@@ -1,17 +1,19 @@
 {
   "development": {
-    "username": "root",
+    "username": "ahmadhasnain",
     "password": null,
-    "database": "database_development",
+    "database": "test",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "port": 5432,
+    "dialect": "postgres"
   },
   "test": {
-    "username": "root",
+    "username": "ahmadhasnain",
     "password": null,
-    "database": "database_test",
+    "database": "testing",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "port": 5432,
+    "dialect": "postgres"
   },
   "production": {
     "username": "root",
