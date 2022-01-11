@@ -5,5 +5,7 @@ const testController = require('../controllers/test');
 
 // define the about route
 router.get('/', middleware.timeLog, testController.printHelloWorld);
+router.get('/getAll', testController.getUsers);
+
 
 module.exports = router

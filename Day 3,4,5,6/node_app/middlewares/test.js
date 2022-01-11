@@ -1,6 +1,6 @@
 
 
-// middleware that is specific to this router
+// middleware that is specific to the router
 
 const timeLog = (req, res, next) => {
   console.log('before timelog');   //pre
