@@ -18,7 +18,18 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   Post.init({
-    content: DataTypes.STRING
+    content: {
+      type: DataTypes.STRING(255),
+      allowNull: false,
+      validate: {
+          is: /^[0-9a-f]{255}$/i,
+          isAlphanumeric: true,
+          notNull: true,
+          notEmpty: true,
+          min: 1,
+          max: 255
+      }
+    }
   }, {
     sequelize,
     modelName: 'Post',

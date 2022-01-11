@@ -4,8 +4,9 @@ var middleware = require('../middlewares/test');
 const testController = require('../controllers/test');
 
 // define the about route
-router.get('/', middleware.timeLog, testController.printHelloWorld);
+router.post('/', middleware.timeLog, testController.printHelloWorld);
 router.get('/getAll', testController.getUsers);
+router.post('/create', testController.createUser);
 
 
 module.exports = router
