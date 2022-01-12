@@ -1,5 +1,5 @@
 const express = require('express')
-var routes = require('./routes/using_router');
+var userRoutes = require('./routes/user');
 const app = express();
 const port = 3000;
 const bodyParser = require('body-parser');
@@ -10,7 +10,7 @@ app.get('/', (req, res) => {
   res.send('Hello World!')
 });
 
-app.use('/user',routes);
+app.use('/user',userRoutes);
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}!`)
