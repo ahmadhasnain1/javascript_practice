@@ -34,6 +34,12 @@ module.exports = {
      * Example:
      * await queryInterface.bulkDelete('People', null, {});
      */
-     await queryInterface.bulkDelete('Users', null, {});
+     await queryInterface.bulkDelete('Users', null, {
+       where: {
+         id: {
+          [Op.between]: [18, 22]                   // BETWEEN 18 AND 22
+         }
+       }
+     });
   }
 };
