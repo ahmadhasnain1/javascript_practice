@@ -16,7 +16,7 @@ module.exports = {
     */
 
      // (B) READ CSV INTO STRING
-    var data = fs.readFileSync(path.resolve( __dirname,"./customers.csv"), "utf8");
+    var data = fs.readFileSync(path.resolve( __dirname,"./users.csv"), "utf8");
     let record_to_insert = [];
     // (C) STRING TO ARRAY
     data = data.split("\n"); // SPLIT ROWS
