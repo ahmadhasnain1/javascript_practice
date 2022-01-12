@@ -1,4 +1,5 @@
 var fs = require('fs'); 
+var path = require('path');
 
 'use strict';
 
@@ -15,7 +16,7 @@ module.exports = {
     */
 
      // (B) READ CSV INTO STRING
-    var data = fs.readFileSync("./customers.csv", "utf8");
+    var data = fs.readFileSync(path.resolve( __dirname,"./customers.csv"), "utf8");
     let record_to_insert = [];
     // (C) STRING TO ARRAY
     data = data.split("\n"); // SPLIT ROWS
@@ -37,7 +38,7 @@ module.exports = {
      await queryInterface.bulkDelete('Users', null, {
        where: {
          id: {
-          [Op.between]: [18, 22]                   // BETWEEN 18 AND 22
+          [Sequelize.Op.between]: [24, 26]                   // BETWEEN 18 AND 22
          }
        }
      });
