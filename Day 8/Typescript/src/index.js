@@ -47,9 +47,9 @@ function add3(num1, num2) {
     if (num2 === void 0) { num2 = 10; }
     return num1 + num2;
 }
-add(1, 2);
-add2(5);
-add3(5);
+console.log(add(1, 2));
+console.log(add2(5));
+console.log(add3(5));
 function fullName(person) {
     console.log("".concat(person.firstName, " ").concat(person.lastName));
 }
@@ -67,7 +67,7 @@ var Employee = /** @class */ (function () {
         this.employeeName = name;
     }
     Employee.prototype.greet = function () {
-        console.log("Good morning ' ".concat(this.employeeName));
+        console.log("Good morning ".concat(this.employeeName));
     };
     return Employee;
 }());

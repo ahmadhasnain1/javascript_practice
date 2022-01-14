@@ -43,9 +43,9 @@ function add3 (num1:number, num2:number = 10) : number {  //default value of opt
         return num1+num2;
 }
 
-add(1,2);
-add2(5);
-add3(5); 
+console.log(add(1,2));
+console.log(add2(5));
+console.log(add3(5)); 
 
 interface Person {
     firstName:string,
@@ -78,7 +78,7 @@ class Employee {   //class
     }
 
     greet() {
-        console.log(`Good morning ' ${this.employeeName}`);
+        console.log(`Good morning ${this.employeeName}`);
     }
 
 }
