@@ -75,7 +75,13 @@ const createUser = async(req:Request, res:Response) => {
 
 const updateUser = async(req:Request, res:Response) => {
   try{
-      let object:any = {};
+      interface object1{
+        firstName?:string,
+        lastName?:string,
+        email?:string,
+        password?:string
+      };
+      let object : object1 = {};
       if(req.body.firstName!=null)  object.firstName = req.body.firstName;
       if(req.body.lastName!=null)  object.lastName = req.body.lastName;
       if(req.body.email!=null)  object.email = req.body.email;

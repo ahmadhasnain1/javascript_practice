@@ -17,10 +17,10 @@
       }
   },
   "include": [
-      "controllers/",
-      "middlewares/",
-      "routes/",
-      "jobs/",
-      "index.ts"
-  ]
+    "controllers/**/*",
+    "middleware/",
+    "routes/**/*",
+    "scheduler/",
+    "app.ts"
+    ]
 }
