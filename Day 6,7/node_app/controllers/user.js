@@ -33,7 +33,7 @@ const getUser = async(req, res) => {
         }
       });
       if (user === null) {
-        res.send('user not found against that id');
+        res.status(404).json({ "error":'user not found against that id'});
       }
       else
         res.send(user);
